@@ -35,6 +35,7 @@ nnoremap <leader>!      :!!<CR>
 nnoremap <leader>e      :e <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap <leader>f      /\%<C-R>=line('.')<CR>l
 nnoremap <leader>d      0D
+nnoremap <leader>w      <C-w>w
 nnoremap <C-\> :tab split<CR>:exe("tag ".expand("<cword>"))<CR>
 nnoremap <A-]> :vsp <CR>:exe("tag ".expand("<cword>"))<CR>
 
