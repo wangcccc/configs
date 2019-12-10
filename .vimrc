@@ -32,9 +32,9 @@ nnoremap <leader>xif    $xxjjdd
 nnoremap <leader>u      mzviwU`z
 nnoremap <leader>l      mzviwu`z
 nnoremap <leader>!      :!!<CR>
-nnoremap <leader>e		:e <C-R>=expand('%:p:h') . '/'<CR>
-nnoremap <leader>f		/\%<C-R>=line('.')<CR>l
-nnoremap <leader>d		0D
+nnoremap <leader>e      :e <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <leader>f      /\%<C-R>=line('.')<CR>l
+nnoremap <leader>d      0D
 nnoremap <C-\> :tab split<CR>:exe("tag ".expand("<cword>"))<CR>
 nnoremap <A-]> :vsp <CR>:exe("tag ".expand("<cword>"))<CR>
 
@@ -94,9 +94,9 @@ autocmd BufReadPost * normal! zR
 " toggle comment
 augroup comment_expr
     autocmd!
-	autocmd FileType c,cpp,java,php,cs      let b:comment = "// "
-	autocmd FileType sh,ruby,python         let b:comment = "# "
-	autocmd FileType vim                    let b:comment = "\" "
+    autocmd FileType c,cpp,java,php,cs      let b:comment = "// "
+    autocmd FileType sh,ruby,python         let b:comment = "# "
+    autocmd FileType vim                    let b:comment = "\" "
 augroup END
 noremap <C-C> :call Comment() <CR>
 function! Comment()
@@ -166,16 +166,16 @@ endfunction
 "
 
 " useful shortcut keys
-" gv        reselect last visual selection
-" cit       edit *ml tag content
-" <C-L>     :redraw!
-" <C-O>     run a command in insert mode
-" <C-R>     paste something under cursor to command
-" <C-W>T    change split to new tab
-" ]p        paste and indent
-" gf		open file
-" <C-W>f	open in a new window
-" <C-W>gf	open in a new tab
+" gv            reselect last visual selection
+" cit           edit *ml tag content
+" <C-L>         :redraw!
+" <C-O>         run a command in insert mode
+" <C-R>         paste something under cursor to command
+" <C-W>T        change split to new tab
+" ]p            paste and indent
+" gf            open file
+" <C-W>f        open in a new window
+" <C-W>gf       open in a new tab
 
 " tag shortcut keys
 " <C-]>         go to first definition
@@ -185,9 +185,9 @@ endfunction
 
 
 " registers
-" 0     last yank buffer
-" 1     last delete buffer
-" "     last buffer (yank or delete)
-" /     last search
-" :     last command
-" _     black hole
+" 0             last yank buffer
+" 1             last delete buffer
+" "             last buffer (yank or delete)
+" /             last search
+" :             last command
+" _             black hole
