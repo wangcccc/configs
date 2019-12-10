@@ -1,6 +1,7 @@
 [alias]
     st = status
     co = checkout
+    b = branche
 [user]
     name = user
     email = user@mail.com
