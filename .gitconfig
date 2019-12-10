@@ -1,0 +1,10 @@
+[alias]
+    st = status
+    co = checkout
+[user]
+    name = user
+    email = user@mail.com
+[core]
+    autocrlf = false
+[push]
+    default = simple
