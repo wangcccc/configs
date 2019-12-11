@@ -15,7 +15,7 @@ set ruler
 set nu
 set tabstop=4
 set shiftwidth=4
-set pastetoggle=<F3>
+set pastetoggle=<F6>
 set expandtab
 set t_Co=256
 set noswapfile
@@ -27,8 +27,6 @@ set autoread
 "
 let mapleader=" "
 nnoremap <leader>"      viw<ESC>a"<ESC>hbi"<ESC>lel
-nnoremap <leader>if     A {<ESC>jo}<CR><ESC>
-nnoremap <leader>xif    $xxjjdd
 nnoremap <leader>u      mzviwU`z
 nnoremap <leader>l      mzviwu`z
 nnoremap <leader>!      :!!<CR>
@@ -36,16 +34,20 @@ nnoremap <leader>e      :e <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap <leader>f      /\%<C-R>=line('.')<CR>l
 nnoremap <leader>d      0D
 nnoremap <leader>w      <C-w>w
+nnoremap <leader>c      :q!<CR>
+nnoremap <leader>if     A {<ESC>jo}<CR><ESC>
+nnoremap <leader>xif    $xxjjdd
 nnoremap <C-\> :tab split<CR>:exe("tag ".expand("<cword>"))<CR>
 nnoremap <A-]> :vsp <CR>:exe("tag ".expand("<cword>"))<CR>
 
-noremap <F2> mzgg=G'z
+noremap <F5> mzgg=G'z
 noremap gc dgg
 noremap <TAB> <C-^>
 
 inoremap jk <ESC>
-inoremap jc <ESC>:wq<CR>
+inoremap jc <ESC>:q!<CR>
 inoremap jw <ESC>:w<CR>
+inoremap jx <ESC>:wq<CR>
 inoremap <C-U> <ESC>mzviwU`za
 inoremap <C-L> <ESC>mzviwu`za
 
@@ -53,7 +55,7 @@ cnoremap w!! w !sudo tee > /dev/null %
 
 
 "
-" plugins managed by vim-plug
+" plugins managed by vim-plug (download with following cmd)
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "
@@ -69,11 +71,10 @@ map <C-n> :NERDTreeToggle<CR>
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'OrangeT/vim-csharp'
-
 Plug 'majutsushi/tagbar'
-let g:tagbar_ctags_bin = '/home/user/ctags'
-nmap <F4> :TagbarToggle<CR>
+" set bin path if ctags is not installed globally
+" let g:tagbar_ctags_bin = '/home/user/ctags'
+nmap <F8> :TagbarToggle<CR>
 
 Plug 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1

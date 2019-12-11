@@ -33,7 +33,7 @@ shopt -s cdable_vars
 shopt -s cdspell
 
 # add git branch info and time to prompt
-PS1='$(printf "\[\e[1;31m\]%*s\r%s" $(( COLUMNS-1 )) \
+PS1='$(printf "\[\e[1;31m\]%*s\r%s" $(( COLUMNS )) \
     "[$(git branch 2>/dev/null | grep '^*' | sed s/..//)] $(date +%H:%M:%S)" \
     "\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\n\[\e[1;33m\]\$\[\e[0m\]")'
 
@@ -66,7 +66,7 @@ alias x='exit'
 alias catn='cat -n'
 alias grepn='grep -n'
 
-# select terminal
+# select terminal emulator for X
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
     export TERM='xterm-256color'
 else
@@ -75,6 +75,7 @@ fi
 
 # configs based on OS
 case $(uname) in
+    # MAC OS X
     'Darwin')
         export TERM="xterm-256color"
         export CLICOLOR=cons25
