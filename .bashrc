@@ -69,8 +69,6 @@ alias grepn='grep -n'
 # select terminal emulator for X
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
     export TERM='xterm-256color'
-else
-    export TERM='xterm-color'
 fi
 
 # configs based on OS
